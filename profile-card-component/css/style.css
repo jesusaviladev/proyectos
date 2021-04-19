@@ -1,0 +1,133 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Kumbh Sans', sans-serif;
+	min-height: 100vh;
+	overflow: hidden;
+	margin:0;
+}
+
+html{
+	background-color: rgb(17, 103, 110);
+	position: relative;
+}
+
+
+html::after, 
+html::before{
+	content: '';
+	display: block;
+  	width: 60vw;
+  	height: 60vw;
+	border-radius: 50%;
+	position: fixed;
+	z-index: -1;
+}
+
+html::before{
+	top: -450px;
+	left: -150px;
+	background: linear-gradient(to right, rgb(17, 103, 110), hsl(185, 75%, 39%));
+}
+
+html::after{
+	bottom: -450px;
+	right: -150px;
+	background: linear-gradient(to right, hsl(185, 75%, 39%), rgb(17, 103, 110));
+}
+
+main{
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+}
+
+.card{
+	width: 360px;
+	height: 380px;
+	background-color: #eee;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.card__header{
+	height: 140px;
+	background-image: url('../assets/images/bg-pattern-card.svg');
+	position: relative;
+}
+
+.card__picture{
+	border: 3px solid #eee;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	background-color: #eee;
+}
+
+.card__body{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	height: 140px;
+	padding-bottom: 1em;
+
+}
+
+.card__text{
+	margin: 0;
+	line-height: 1.5;
+	font-weight: bolder;
+}
+
+.card__text--light{
+	color:grey;
+	font-weight: normal;
+}
+
+.card__text--min{
+	font-size:.7em;
+	letter-spacing: 2px;
+}
+
+.card__footer{
+	display: flex;
+}
+
+.card__stats{
+	width: 100%;
+	text-align: center;
+	border-top: 1px solid #AAA;
+	padding: .5em 2em;
+}
+
+.card__number{
+	font-weight: bolder;
+	display: flex;
+	flex-direction: column;
+	line-height: 1.5;
+}
+
+@media screen and (max-width: 600px){
+	html::after, 
+	html::before{
+  	width: 100vw;
+  	height: 100vw;
+}
+
+html::before{
+	top: -100px;
+	left: -150px;
+	background: linear-gradient(to right, rgb(17, 103, 110), hsl(185, 75%, 39%));
+}
+
+html::after{
+	bottom: -100px;
+	right: -150px;
+	background: linear-gradient(to right, hsl(185, 75%, 39%), rgb(17, 103, 110));
+}
+}
