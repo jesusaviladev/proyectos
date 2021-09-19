@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Reto 10</title>
+</head>
+<body>
+	<header class="header">
+		<h1 class="header__title">
+			Learn to code by watching others
+		</h1>
+		<p class="header__subtitle">
+			See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+            but understanding how developers think is invaluable. 
+		</p>	
+	</header>
+	<main class="main">
+		<section class="section">
+			<header class="section__header">
+				<p class="section__text">
+					<span class="section__text--bold">Try it free 7 days</span> then $20/mo. thereafter
+				</p>
+			</header>
+			<form action="#" class="form" id="signupForm" autocomplete="off">
+				<div class="form__field" id="form-field-name" data-error="First Name cannot be empty">
+					<input type="text" class="form__input " id="name" name="name" placeholder="First Name">
+				</div>
+				<div class="form__field" id="form-field-lastname" data-error="Last Name cannot be empty">
+					<input type="text" class="form__input" id="lastname" name="lastname" placeholder="Last Name">
+				</div>
+				<div class="form__field" id="form-field-email" data-error="Looks like this is not an email">
+					<input type="text" class="form__input" id="email" name="email" placeholder="Email Address">
+				</div>
+				<div class="form__field" id="form-field-password" data-error="Password cannot be empty">
+					<input type="password" class="form__input" id="password" name="password" placeholder="Password">
+				</div>
+				<input type="submit" value="CLAIM YOUR FREE TRIAL" class="form__button">
+				<p class="form__terms">
+					By clicking the button, you are agreeing to our 
+					<small>
+						<a href="#" class="form__link">Terms and Services</a>
+					</small>
+				</p>
+			</form>
+		</section>
+	</main>
+
+	<script src="script.js"></script>
+</body>
+</html>
